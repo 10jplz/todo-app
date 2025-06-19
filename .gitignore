@@ -1,0 +1,20 @@
+nano ~/.zshrc
+
+# Node
+node_modules/
+dist/
+*.log
+.env
+
+# Deno
+deno.lock
+
+# macOS
+.DS_Store
+
+# Vite
+.vite/
+.cache/
+
+# Optional: Supabase keys if present
+supabase.ts
