@@ -1,10 +1,10 @@
 import { Application, Router } from "https://deno.land/x/oak@v12.6.1/mod.ts";
 import { oakCors } from "https://deno.land/x/cors/mod.ts";
-import { getTodos, createTodo, toggleTodo, deleteTodo } from "./routes/todos.ts";
+import { getTodos, addTodo, toggleTodo, deleteTodo, getTodoHistory } from "./routes/todos.ts"; // Import new handler
 
 const app = new Application();
 
-app.use(oakCors()); // <-- Enable CORS for all routes
+app.use(oakCors());
 
 app.use(async (ctx, next) => {
   console.log(`${ctx.request.method} ${ctx.request.url}`);
@@ -25,9 +25,10 @@ const router = new Router();
 
 router
   .get("/todos", getTodos)
-  .post("/todos", createTodo)
-  .patch("/todos/:id", toggleTodo)  // PATCH method here
-  .delete("/todos/:id", deleteTodo);
+  .post("/todos", addTodo)
+  .patch("/todos/:id", toggleTodo)
+  .delete("/todos/:id", deleteTodo)
+  .get("/todo_history", getTodoHistory); // Add this line for history
 
 app.use(router.routes());
 app.use(router.allowedMethods());

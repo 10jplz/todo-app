@@ -7,7 +7,7 @@
       class="form-control"
       placeholder="Add new todo"
     />
-    <button class="btn btn-primary" @click="handleAdd">Add</button>
+    <button type="button" class="btn btn-primary" @click="handleAdd">Add</button>
   </div>
 </template>
 

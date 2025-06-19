@@ -1,99 +1,100 @@
-Awesome — your API is up and running 🎉
+Here’s the raw plain text version of your README.md for easy copy-pasting:
 
-Now let’s create a clear, structured README.md file that’s optimized for AI agents (like me!) and future-you to understand and continue the project later.
+# 📝 Todo App
 
-⸻
+A full-stack todo app built with:
 
-✅ What makes it AI-friendly?
-
-We’ll include:
-	•	✅ Project layout
-	•	✅ Dependencies and tasks
-	•	✅ Setup steps
-	•	✅ Environment info
-	•	✅ Clear next steps
-	•	🧠 Minimal natural language, clear structure and keys
-
-⸻
-
-📝 Create README.md in todo-backend/
-
-Here’s the full content to paste in:
-
-# 📝 Todo App – Deno Backend
-
-## 📁 Project Structure
-
-todo-backend/
-├── main.ts              # Oak app entry point
-├── supabase.ts          # Supabase client setup
-├── routes/              # Route handlers (to be added)
-├── .env                 # Supabase URL + anon key
-├── deno.json            # Deno task runner config
-└── README.md            # Project notes for AI agents
+- 🔧 **Deno** + **Oak** for the backend API
+- 🖼️ **Vue 3** + **Vite** for the frontend
+- 🛢️ **Supabase** for the database and authentication (optional)
 
 ---
 
-## 🧠 Agent Instructions
+## 📁 Project Structure
 
-This backend runs on **Deno + Oak**, connects to **Supabase** (Postgres), and serves JSON APIs for a Todo App.
-
-Use `deno.json` tasks to run commands. Keep code modular (e.g., separate route files). Supabase will store all todos in a table.
+todo-app/
+├── todo-backend/   # Deno + Oak + Supabase API
+└── todo-frontend/  # Vue 3 + Vite frontend
 
 ---
 
 ## ⚙️ Setup
 
-1. Clone repo
-2. Run from inside `todo-backend/`
-3. Make sure `.env` exists:
-
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_ANON_KEY=your-anon-public-api-key
-
-4. Run server:
+### 1. Clone the Repo
 
 ```bash
-deno task start
+git clone git@github.com:10jplz/todo-app.git
+cd todo-app
 
 
 ⸻
 
-📦 Dependencies
-	•	Oak
-	•	Supabase JS
-	•	Deno std dotenv
+2. Backend Setup (todo-backend)
+
+📦 Install Deno
+
+Install Deno
+
+🔐 Create .env
+
+Inside todo-backend/, create a .env file:
+
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_anon_or_service_key
+
+🚀 Start the API server
+
+cd todo-backend
+deno task dev
+
+Runs on: http://localhost:8000
 
 ⸻
 
-✅ Current State
-	•	Oak server bootstrapped
-	•	.env loaded
-	•	Root route / responds
-	•	Supabase client connected
-	•	Todos route /todos implemented
-	•	Supabase todos table created
+3. Frontend Setup (todo-frontend)
+
+📦 Install dependencies
+
+cd todo-frontend
+npm install
+
+🧪 Start the frontend
+
+npm run dev
+
+Runs on: http://localhost:5173
 
 ⸻
 
-🚧 Next Steps
-	•	Create todos table in Supabase
-	•	Add GET /todos route
-	•	Add POST /todos route
-	•	Add Vue + Tailwind frontend
+📌 Features
+	•	✅ Add todos
+	•	✅ Mark as complete
+	•	✅ Delete todos
+	•	✅ History tab with timestamps
 
 ⸻
 
-🧠 Notes for AI Agents
-	•	Primary language: TypeScript (Deno)
-	•	Uses .env for secrets
-	•	Use native deno task for commands
-	•	Supabase client is initialized in supabase.ts
-	•	Add route handlers in routes/todos.ts
+🧠 Future Improvements
+	•	✏️ Edit todos
+	•	🔐 User login with Supabase auth
+	•	🌐 Deploy with Deno Deploy + Vercel
 
----
+⸻
 
-Save that in `todo-backend/README.md`, and you're fully documented ✅
+📸 Screenshots
 
-Let me know when you're ready to move to:
-> 🧱 Step 5: Supabase table setup + connecting the `/todos` route.
+Coming soon…
+
+⸻
+
+🧑‍💻 Author
+
+@10jplz
+
+⸻
+
+📄 License
+
+MIT
+
+Just copy and paste this into your README.md file!

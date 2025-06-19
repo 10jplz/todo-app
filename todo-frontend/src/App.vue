@@ -4,6 +4,15 @@
 
     <!-- Tabs -->
     <ul class="nav nav-tabs mb-3">
+     <li class="nav-item">
+        <button
+          class="nav-link"
+          :class="{ active: currentTab === 'add' }"
+          @click="currentTab = 'add'"
+        >
+          Add Todo
+        </button>
+      </li>
       <li class="nav-item">
         <button
           class="nav-link"
@@ -13,15 +22,7 @@
           Todo List
         </button>
       </li>
-      <li class="nav-item">
-        <button
-          class="nav-link"
-          :class="{ active: currentTab === 'add' }"
-          @click="currentTab = 'add'"
-        >
-          Add Todo
-        </button>
-      </li>
+     
       <li class="nav-item">
         <button
           class="nav-link"
@@ -57,6 +58,6 @@ const refreshKey = ref(0)
 
 function handleTodoAdded() {
   refreshKey.value++
-  currentTab.value = 'list' // switch to list after adding
+//  currentTab.value = 'list' // switch to list after adding
 }
 </script>
